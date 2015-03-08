@@ -195,7 +195,7 @@ The application will be set up with a shell provisioner and available on **10.0.
 
 If I had more time to take on the project, here are some of the first things I'd work on.
 
-** Backend Tests **
+**Backend Tests**
 
 The backend tests for the application don't cover nearly as many edge cases as I'd like. Beyond the obvious malformed response I'd really like to cover things like: 
 
@@ -204,7 +204,7 @@ The backend tests for the application don't cover nearly as many edge cases as I
 - Network and filesystem failures
 - Malformed queries to the API
 	
-** Frontend Tests **
+**Frontend Tests**
 
 Much like the backed the frontend tests are fairly "happy-path". Beyond the obvious usability of the application they could use: 
 
@@ -213,7 +213,7 @@ Much like the backed the frontend tests are fairly "happy-path". Beyond the obvi
 - Network and filesystem failures
 - Malformed queries to the API
 
-** Frontend improvements on small devices **
+**Frontend improvements on small devices**
 
 The performance and usability on mobile devices could be significanly improved with some refactoring. Some initial things to look at:
 
@@ -222,7 +222,7 @@ The performance and usability on mobile devices could be significanly improved w
 - Left and right side wildcard search might not be the best choice on phones.
 - The navigation bar is larger than it needs to be on phones, and the address bar can't be scrolled up due to the way the application height is determined.
 
-** Misc **
+**Misc**
 
 - The ability to build a tour by chaining together pins would be a great feature. As would directions from current location. 
 - Porting the application from CSS to LESS would make it more readable.
