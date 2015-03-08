@@ -184,10 +184,10 @@ The application will be set up with a shell provisioner and available on **10.0.
 
 ### Before live deployment
 
-1. Set your bing and google maps API keys in ```config/maps.php```
-2. Fill out your database connection info and set the default in ```config/database.php```
+1. Set your bing and google maps API keys in ```app/config/maps.php```
+2. Fill out your database connection info and set the default in ```app/config/database.php```
 3. Generate an application encryption key using ```php artisan key:generate```
-4. Set your application URL in ```config/app.php```
+4. Set your application URL in ```app/config/app.php```
 5. Ensure dependencies are up to date with ```composer update```
 
 
