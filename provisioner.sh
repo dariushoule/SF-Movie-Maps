@@ -36,4 +36,5 @@ php artisan migrate
 php artisan db:seed
 
 cd /app/public/
+mkdir posters
 chmod ug+w posters
