@@ -2,7 +2,7 @@
 
 This application is based on the requirements detailed on Uber's [SF Movies coding challenge](https://github.com/uber/coding-challenge-tools/blob/master/coding_challenge.md#sf-movies).
 
-At a high level, it is able to ingest the data from [this source](https://data.sfgov.org/resource/yitu-d5am.json) to display the locations of popular movies filmed in San Francisco. Live demo can be found here: [http://104.131.25.62/](http://104.131.25.62/)
+At a high level, it is able to ingest the data from [this source](https://data.sfgov.org/resource/yitu-d5am.json) to display the locations of popular movies filmed in San Francisco. Live demo can be found here: [http://sfmap.dbot2000.com/](http://sfmap.dbot2000.com/)
 
 
 ### How it works: Backend
