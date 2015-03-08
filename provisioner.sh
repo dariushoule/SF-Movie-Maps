@@ -35,6 +35,9 @@ composer update
 php artisan migrate
 php artisan db:seed
 
+chgrp -R www-data /app
 cd /app/public/
 mkdir posters
-chmod ug+w posters
+mkdir combined
+chmod -R 775 posters
+chmod -R 775 combined
