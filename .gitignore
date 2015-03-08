@@ -1,5 +1,6 @@
 .vagrant/
 public/posters/
-public/combined/
+public/combined/full/
+public/combined/min/
 vendor/
 composer.lock

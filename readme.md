@@ -120,7 +120,7 @@ This is a responsive single page frontend with three views. A map and list view 
 
 - Initial data needed to load pins and populate the sidebar is precached to the browser's localStorage.
 	- This allows for fast loads after the initial visit.
-	- This reduces the load on an API server as the most expensive query needed to service a client won't be called every visit.
+	- This means the most expensive query needed to service a client won't be called every visit.
 		- The localStorage cache is busted when the ```last-modified``` endpoint value changes.
 - A subset of additional tests are available for testing on small form factor devices. Simply load the test on a small device or sized down browser.
 
@@ -144,6 +144,8 @@ The files worth taking a look at in the project reside in the following location
 
 ```app/controllers/*``` Homepage and API controllers
 
+```app/views/*``` Homepage markup
+
 ```Vagrantfile``` Vagrant configuration
 
 ```provisioner.sh``` Shell provisioner for local environment setup
@@ -154,26 +156,26 @@ The files worth taking a look at in the project reside in the following location
 *Backend*
 
 - ```PHP/Laravel framework```
-	- ```Laravel ORM``` and ```Blade``` templating engine.
-	- ```PostgreSQL``` or ```MySQL``` database engine
+	- ```Laravel ORM``` and ```Blade``` Templating engine
+	- ```PostgreSQL``` or ```MySQL``` Database engine
 	
 *Frontend*
 
-- ```Bootstrap/jQuery``` responsive layout and utility library.
-- ```qUnit``` functionality testing.
-- ```LokiJS``` for in memory movie database, filtering, localStorage persistence.
-- ```Knockout``` UI bindings.
+- ```Bootstrap/jQuery``` Responsive layout and utility library
+- ```qUnit``` Functionality testing
+- ```LokiJS``` In-memory movie database, filtering, localStorage persistence
+- ```Knockout``` UI bindings
 
 *API's Used*
 
 - ```Socrata Open Data API (SODA)```
 - ```Google/Bing Geocoder```
-- ```(O/I)MDB title metadata search.```
+- ```(O/I)MDB title metadata search```
 
 
 ### Local environment setup
 
-Setting up the application locally is easy and self-contained using vagrant. Dependent on a VirtualBox provider.
+Setting up the application locally is easy and self-contained using vagrant -- dependent on a VirtualBox provider.
 
 ```
 cd /<project directory>/
@@ -185,7 +187,7 @@ The application will be set up with a shell provisioner and available on **10.0.
 
 ### Before live deployment
 
-1. Set your bing and google maps API keys in ```app/config/maps.php```
+1. Set your Bing and Google maps API keys in ```app/config/maps.php```
 2. Fill out your database connection info and set the default in ```app/config/database.php```
 3. Generate an application encryption key using ```php artisan key:generate```
 4. Set your application URL in ```app/config/app.php```
@@ -207,12 +209,11 @@ The backend tests for the application don't cover nearly as many edge cases as I
 	
 **Frontend Tests**
 
-Much like the backed the frontend tests are fairly "happy-path". Beyond the obvious usability of the application they could use: 
+Much like the backed the frontend tests are fairly "happy-path". Beyond the obvious usability of the application they could use testing around: 
 
-- Testing of promise failure conditions (network and map failures)
-- Testing of the 
-- Network and filesystem failures
-- Malformed queries to the API
+- Testing of promise failure conditions (slow/dead network and map failures)
+- Viewport resize functionality
+- Malformed filter values
 
 **Frontend improvements on small devices**
 
@@ -221,7 +222,8 @@ The performance and usability on mobile devices could be significanly improved w
 - Don't apply the knockout bindings for the list-view sidebar on small form factors.
 - Eliminate need to iterate pins for lat/lng.
 - Left and right side wildcard search might not be the best choice on phones.
-- The navigation bar is larger than it needs to be on phones, and the address bar can't be scrolled up due to the way the application height is determined.
+- The navigation bar is larger than it needs to be on phones.
+- The address bar can't be scrolled up due to the way the application height is determined.
 
 **Misc**
 
