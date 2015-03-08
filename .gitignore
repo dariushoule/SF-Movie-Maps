@@ -1,0 +1,5 @@
+.vagrant/
+public/posters/
+public/combined/
+vendor/
+composer.lock
