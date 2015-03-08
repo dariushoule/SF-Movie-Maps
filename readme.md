@@ -9,7 +9,7 @@ At a high level, it is able to ingest the data from [this source](https://data.s
 
 Data is loaded from the source using a CLI command. Within the applications folder run ```"php artisan load:titles"```. This can be automated using a cron job, to keep the application in sync with the datasource on a schedule.
 
-After processing, information is stored in a your choice of a PostgreSQL or MySQL database.
+After processing, information is stored in your choice of a PostgreSQL or MySQL database.
 
 ![Image](erd.png?raw=true)
 
@@ -19,8 +19,8 @@ After processing, information is stored in a your choice of a PostgreSQL or MySQ
 1. Data is retrieved from the source and validated as JSON.
 2. Data is flattened down to a single entry with nested locations and actors. This is necessary as the data source is not normalized. 
 3. A checksum is calculated for each entry and preprocessing occurs
-	- If the title exists in the database but its checksum is different updates are generated for the entry. 
-	- If the title does not exist in the database inserts are generated.
+	- If the title exists in the database but its checksum is different, updates are generated for the entry. 
+	- If the title does not exist in the database, inserts are generated.
 		- Missing locations and malformatted names are resolved.
 		- Poster images are retrieved based on the movie's title.
 		- Location descriptions are geolocated.
@@ -30,12 +30,12 @@ After processing, information is stored in a your choice of a PostgreSQL or MySQ
 	
 #### API
 
-The backend provides a dead simple three-endpoint API.
+The backend provides a dead-simple three-endpoint API.
 
-GET /titles-and-locations/
+```GET /titles-and-locations/```
 	- Returns JSON array payload containing the bare information needed to display pins and populate the sidebar.
 	
-*Example*
+*Example Response*
 
 ```
 [{
@@ -47,9 +47,10 @@ GET /titles-and-locations/
 },...
 ```
 
-GET /title/{title_id}
+```GET /title/{title_id}```
 	- Returns JSON object containing the information needed to display complete details for a movie. 
-*Example*
+	
+*Example Response*
 
 ```
 {
@@ -85,10 +86,10 @@ GET /title/{title_id}
 }
 ```
 
-GET /last-modified/	
+```GET /last-modified/```
 	- Returns JSON object containing a last-modified timestamp of most recent data loaded. This allows API consumers to know when cached data should be purged.
 	
-*Example*
+*Example Response*
 
 ```
 {"modified":1425580161}
