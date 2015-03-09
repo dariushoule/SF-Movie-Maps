@@ -30,7 +30,7 @@ After processing, information is stored in your choice of a PostgreSQL or MySQL 
 	
 #### API
 
-The backend provides a dead-simple three-endpoint API.
+The backend provides a dead-simple three endpoint API.
 
 ```GET /titles-and-locations/```
 	- Returns JSON array payload containing the bare information needed to display pins and populate the sidebar.
