@@ -229,4 +229,6 @@ The performance and usability on mobile devices could be significantly improved 
 
 - The ability to build a tour by chaining together pins would be a great feature. As would directions from current location. 
 - Porting the application styles from CSS to LESS would make it more readable.
+- When multiple pins lie in the same location, only the top one is selectable (e.g. Golden Gate Bridge), there needs to be a way to handle multiple films in the same location.
+- The geocoder is biased to San Francisco but some descriptions still end up in wildly different locations. 
 - The geocoder accuracy is much worse when the location description spans an entire street or holds addresses in parenthesis. By preprocessing some of these we can make them more understandable to the geocoder.
