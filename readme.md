@@ -228,5 +228,5 @@ The performance and usability on mobile devices could be significantly improved 
 **Misc**
 
 - The ability to build a tour by chaining together pins would be a great feature. As would directions from current location. 
-- Porting the application from CSS to LESS would make it more readable.
+- Porting the application styles from CSS to LESS would make it more readable.
 - The geocoder accuracy is much worse when the location description spans an entire street or holds addresses in parenthesis. By preprocessing some of these we can make them more understandable to the geocoder.
