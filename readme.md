@@ -217,7 +217,7 @@ Much like the backed the frontend tests are fairly "happy-path". Beyond the obvi
 
 **Frontend improvements on small devices**
 
-The performance and usability on mobile devices could be significanly improved with some refactoring. Some initial things to look at:
+The performance and usability on mobile devices could be significantly improved with some refactoring. Some initial things to look at:
 
 - Don't apply the knockout bindings for the list-view sidebar on small form factors.
 - Eliminate need to iterate pins for lat/lng.
