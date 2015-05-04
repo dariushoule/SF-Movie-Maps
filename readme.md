@@ -1,6 +1,6 @@
 ## San Francisco Movie Map
 
-At a high level, it is able to ingest the data from [this source](https://data.sfgov.org/resource/yitu-d5am.json) to display the locations of popular movies filmed in San Francisco. Live demo can be found here: [http://sfmap.dbot2000.com/](http://sfmap.dbot2000.com/)
+At a high level, this application is able to ingest the data from [this source](https://data.sfgov.org/resource/yitu-d5am.json) to display the locations of popular movies filmed in San Francisco. Live demo can be found here: [http://sfmap.dbot2000.com/](http://sfmap.dbot2000.com/)
 
 
 ### How it works: Backend
